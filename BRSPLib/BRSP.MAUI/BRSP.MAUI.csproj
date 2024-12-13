@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <RootNamespace>BRSP</RootNamespace>
+    <AssemblyName>BlueRadiosMaui</AssemblyName>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="libBrsp.a">
+      <Kind>Static</Kind>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>AssetsLibrary</Frameworks>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Brsp.h" />
+  </ItemGroup>
+</Project>
